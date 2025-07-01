@@ -2,11 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-       System.out.println(isPalindrome( -1221));
-       System.out.println(isPalindrome( 707));
-       System.out.println(isPalindrome( 11212));
-       System.out.println(isPerfectNumber( 28));
-       System.out.println(numberToWords(934));
+
+        //System.out.println(isPalindrome(-21));
+        System.out.println(isPerfectNumber(10));
 
     }
 //Polidrom sayıyı bulma
@@ -23,9 +21,8 @@ public class Main {
    public static boolean isPerfectNumber(int number){
         if(number<0)
             return false;
-
         int total=0;
-        for(int i=1;i<number/2;i++){
+        for(int i=1; i <= number/2;i++){
             if(number%i==0){
                 total +=i;
             }
@@ -38,44 +35,44 @@ if(number<0)
     return "Invalid Value";
 
 char[] digits=String.valueOf(number).toCharArray();
-String numberToText=" ";
+String numToText="";
 for(char digit:digits){
   switch (digit){
       case '0':
-          numberToText+= "Zero ";
+          numToText += "Zero ";
           break;
       case '1':
-          numberToText += "One ";
+          numToText += "One ";
           break;
       case '2':
-          numberToText += "Two";
+          numToText += "Two ";
           break;
       case '3':
-          numberToText += "Three";
+          numToText += "Three ";
           break;
       case '4':
-          numberToText += "Four";
+          numToText += "Four ";
           break;
       case '5':
-          numberToText += "Five";
+          numToText += "Five ";
           break;
       case '6':
-          numberToText+= "Six";
+          numToText += "Six ";
           break;
           case '7':
-          numberToText += "Seven";
+          numToText += "Seven ";
           break;
       case '8':
-          numberToText += "Eight";
+          numToText += "Eight ";
           break;
       case '9':
-          numberToText += "Nine";
+          numToText += "Nine ";
           break;
 
   }
 
 }
-return numberToText.trim();
+return numToText.trim();
    }
 
 }
